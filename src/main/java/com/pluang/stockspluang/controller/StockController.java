@@ -28,4 +28,17 @@ public class StockController {
         log.debug("StockController --- getProfitForDay --- ended");
         return stockResponse;
     }
+
+    @GetMapping("/v2/{start}/{end}")
+    public ResponseEntity<StockProfitResponse> getProfitBetweenDay(@PathVariable("start") String startDate,
+                                                                   @PathVariable("end") String endDate) {
+        log.debug("StockController --- getProfitForDay --- started");
+        ResponseEntity<StockProfitResponse> stockResponse;
+        StockProfitResponse profit = stockService.getProfit(startDate, endDate);
+        stockResponse = new ResponseEntity<>(profit, HttpStatus.OK);
+        log.debug("StockController --- getProfitForDay --- ended");
+        return stockResponse;
+    }
+
+
 }

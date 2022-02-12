@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.pluang</groupId>
     <artifactId>stocks-pluang</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1</version>
     <name>stocks-pluang</name>
     <description>stocks-pluang</description>
     <properties>
