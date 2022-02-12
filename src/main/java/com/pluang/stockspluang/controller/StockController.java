@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Slf4j
 @Controller
-@RequestMapping("/api/")
+@RequestMapping("/api")
 @RequiredArgsConstructor
 public class StockController {
 
     private final StockService stockService;
 
-    @GetMapping("v1/{current}")
+    @GetMapping("/v1/{current}")
     public ResponseEntity<StockProfitResponse> getProfitForDay(@PathVariable("current") String currentDate) {
         log.debug("StockController --- getProfitForDay --- started");
         ResponseEntity<StockProfitResponse> stockResponse;
